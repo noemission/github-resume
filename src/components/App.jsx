@@ -4,6 +4,7 @@ import UsernameForm from "./UsernameForm/UsernameForm";
 import GithubUser from "../models/GithubUser";
 import UserCard from "./UserCard/UserCard";
 import RepositoriesList from "./RepositoriesList/RepositoriesList";
+import "./App.scss";
 
 class App extends Component {
   state = {
@@ -34,7 +35,7 @@ class App extends Component {
   render() {
     const {user} = this.state;
     return (
-      <Container>
+      <Container className="main-container">
         <Header textAlign="center" as="h2">Github Resume <sup>2</sup> </Header>
         <UsernameForm error={this.state.formError} loading={this.state.formLoading} onSubmit={this.onSubmit} />
         {user && user.info && <UserCard user={user.info} languages={user.languages} />}
