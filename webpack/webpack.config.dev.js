@@ -25,17 +25,13 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|woff(2)?|ttf|eot|svg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {},
-          },
-        ],
+        loader: 'file-loader',
       },
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
+      title: 'Github Resume',
       template: path.resolve(__dirname, '../src/index.html')
     })
   ]

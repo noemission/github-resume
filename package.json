@@ -1,27 +1,9 @@
 {
-  "name": "react-simple-boilerplate",
-  "version": "1.0.0",
-  "description": "Simple and lightweight Boilerplate for ReactJS projects",
   "scripts": {
     "lint": "eslint src --ext .js --ext .jsx",
-    "start": "webpack-dev-server --config webpack/webpack.config.dev.js"
+    "start": "webpack-dev-server --config webpack/webpack.config.dev.js",
+    "build": "webpack --config webpack/webpack.config.prod.js"
   },
-  "repository": "https://github.com/noahlotzer/react-simple-boilerplate.git",
-  "keywords": [
-    "react",
-    "reactjs",
-    "boilerplate",
-    "reload",
-    "live",
-    "edit",
-    "webpack"
-  ],
-  "author": "Noah-Jerome Lotzer <noah.lotzer@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/noahlotzer/react-simple-boilerplate/issues"
-  },
-  "homepage": "https://github.com/noahlotzer/react-simple-boilerplate",
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
@@ -36,12 +18,16 @@
     "eslint-plugin-react": "^7.12.4",
     "file-loader": "^3.0.1",
     "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
+    "terser-webpack-plugin": "^1.2.3",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
-    "webpack-dev-server": "^3.2.1"
+    "webpack-dev-server": "^3.2.1",
+    "webpack-merge": "^4.2.1"
   },
   "dependencies": {
     "@babel/runtime": "^7.4.3",
@@ -51,5 +37,19 @@
     "react-dom": "^16.8.6",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.86.0"
-  }
+  },
+  "name": "github-resume",
+  "description": "A react application that can automatically create a resume by parsing a github profile",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noemission/github-resume.git"
+  },
+  "author": "Alex Michailidis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/noemission/github-resume/issues"
+  },
+  "homepage": "https://github.com/noemission/github-resume#readme"
 }
